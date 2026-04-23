@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio BTS SIO SISR – Zoha" />
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- RGPD : pas de cookies tiers, pas de trackers -->
+  <title>Portfolio BTS SIO SISR – Zoha</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== BANNIÈRE RGPD ===== -->
+  <div id="rgpd-banner" role="dialog" aria-label="Politique de confidentialité">
+    <p>Ce site ne collecte aucune donnée personnelle. Le formulaire de contact est à titre indicatif. <button id="rgpd-ok">J'ai compris</button></p>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header>
+    <nav class="navbar" aria-label="Navigation principale">
+      <div class="nav-logo">
+        <span class="logo-bracket">[</span>Zoha<span class="logo-bracket">]</span>
+        <small>BTS SIO · SISR</small>
+      </div>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="#cv" class="nav-link">CV</a></li>
+        <li><a href="#entreprise" class="nav-link">Entreprise</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#e5" class="nav-link">E5</a></li>
+        <li><a href="#e6" class="nav-link">E6</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== ACCUEIL ===== -->
+    <section id="accueil" class="hero">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="hero-tag">// BTS SIO · Option SISR</p>
+          <h1>Zoha<br /><span class="hero-accent">Portfolio</span></h1>
+          <p class="hero-sub">Solutions Informatiques et Sécurité des Réseaux</p>
+          <a href="#e5" class="btn-primary">Voir mes travaux</a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="terminal-box">
+            <div class="terminal-bar"><span></span><span></span><span></span></div>
+            <pre class="terminal-code"><span class="t-comment">$ cat profil.txt</span>
+<span class="t-key">Nom     </span><span class="t-val">: Zoha</span>
+<span class="t-key">BTS     </span><span class="t-val">: SIO – SISR</span>
+<span class="t-key">Focus   </span><span class="t-val">: Réseaux &amp; Sécurité</span>
+<span class="t-key">Statut  </span><span class="t-val">: En alternance</span>
+<span class="t-prompt">$ _</span></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CV ===== -->
+    <section id="cv" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="section-num">01.</span> Curriculum Vitæ</h2>
+        <p class="section-desc">Mon parcours, mes compétences et mes expériences au format PDF.</p>
+        <div class="card card-single">
+          <!-- 🔧 Remplacer "cv.pdf" par le nom de votre fichier PDF dans le même dossier -->
+          <div class="pdf-entry">
+            <div class="pdf-icon" aria-hidden="true">📄</div>
+            <div class="pdf-info">
+              <strong>Curriculum Vitæ – Zoha</strong>
+              <small>Dernière mise à jour : 2025</small>
+            </div>
+            <div class="pdf-actions">
+              <a href="cv.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+              <a href="cv.pdf" download class="btn-primary">Télécharger</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ENTREPRISE ===== -->
+    <section id="entreprise" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span class="section-num">02.</span> Présentation de l'entreprise</h2>
+        <p class="section-desc">Découvrez l'entreprise qui m'accueille en alternance.</p>
+        <div class="card card-single">
+          <div class="pdf-entry">
+            <div class="pdf-icon" aria-hidden="true">🏢</div>
+            <div class="pdf-info">
+              <strong>Présentation de l'entreprise</strong>
+              <small>Plaquette / document de présentation</small>
+            </div>
+            <div class="pdf-actions">
+              <!-- 🔧 Remplacer "entreprise.pdf" par votre fichier -->
+              <a href="entreprise.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+              <a href="entreprise.pdf" download class="btn-primary">Télécharger</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="section-num">03.</span> Certifications</h2>
+        <p class="section-desc">Mes certifications professionnelles et académiques obtenues.</p>
+        <div class="card-grid">
+
+          <!-- 🔧 Dupliquer ce bloc pour ajouter une certification -->
+          <div class="card pdf-card">
+            <div class="pdf-icon" aria-hidden="true">🎓</div>
+            <strong>Certification 1</strong>
+            <small>Ex : Cisco CCNA / PIX / ...</small>
+            <div class="pdf-actions">
+              <a href="certification1.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+              <a href="certification1.pdf" download class="btn-primary">Télécharger</a>
+            </div>
+          </div>
+
+          <div class="card pdf-card">
+            <div class="pdf-icon" aria-hidden="true">🎓</div>
+            <strong>Certification 2</strong>
+            <small>Ex : Microsoft / CompTIA / ...</small>
+            <div class="pdf-actions">
+              <a href="certification2.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+              <a href="certification2.pdf" download class="btn-primary">Télécharger</a>
+            </div>
+          </div>
+
+          <div class="card pdf-card">
+            <div class="pdf-icon" aria-hidden="true">🎓</div>
+            <strong>Certification 3</strong>
+            <small>Ajouter votre certification</small>
+            <div class="pdf-actions">
+              <a href="certification3.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+              <a href="certification3.pdf" download class="btn-primary">Télécharger</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== E5 ===== -->
+    <section id="e5" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span class="section-num">04.</span> Épreuve E5</h2>
+        <p class="section-desc">Tableau de synthèse, missions professionnelles et veille technologique.</p>
+
+        <!-- Tableau de synthèse -->
+        <div class="subsection">
+          <h3 class="subsection-title">📋 Tableau de synthèse</h3>
+          <div class="card card-single">
+            <div class="pdf-entry">
+              <div class="pdf-icon" aria-hidden="true">📋</div>
+              <div class="pdf-info">
+                <strong>Tableau de synthèse E5</strong>
+                <small>Document officiel de synthèse des activités</small>
+              </div>
+              <div class="pdf-actions">
+                <!-- 🔧 Remplacer "e5-tableau-synthese.pdf" -->
+                <a href="e5-tableau-synthese.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+                <a href="e5-tableau-synthese.pdf" download class="btn-primary">Télécharger</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Missions E5 -->
+        <div class="subsection">
+          <h3 class="subsection-title">🛠️ Missions E5</h3>
+          <div class="card-grid">
+
+            <!-- 🔧 Dupliquer ce bloc pour ajouter une mission -->
+            <div class="card pdf-card">
+              <div class="pdf-icon" aria-hidden="true">🛠️</div>
+              <strong>Mission 1</strong>
+              <small>Intitulé de la mission</small>
+              <div class="pdf-actions">
+                <a href="e5-mission1.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+                <a href="e5-mission1.pdf" download class="btn-primary">Télécharger</a>
+              </div>
+            </div>
+
+            <div class="card pdf-card">
+              <div class="pdf-icon" aria-hidden="true">🛠️</div>
+              <strong>Mission 2</strong>
+              <small>Intitulé de la mission</small>
+              <div class="pdf-actions">
+                <a href="e5-mission2.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+                <a href="e5-mission2.pdf" download class="btn-primary">Télécharger</a>
+              </div>
+            </div>
+
+            <div class="card pdf-card">
+              <div class="pdf-icon" aria-hidden="true">🛠️</div>
+              <strong>Mission 3</strong>
+              <small>Intitulé de la mission</small>
+              <div class="pdf-actions">
+                <a href="e5-mission3.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+                <a href="e5-mission3.pdf" download class="btn-primary">Télécharger</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Veille technologique -->
+        <div class="subsection">
+          <h3 class="subsection-title">📡 Veille technologique</h3>
+          <div class="card-grid">
+
+            <!-- 🔧 Dupliquer ce bloc pour ajouter une veille -->
+            <div class="card pdf-card">
+              <div class="pdf-icon" aria-hidden="true">📡</div>
+              <strong>Veille 1</strong>
+              <small>Thème de la veille technologique</small>
+              <div class="pdf-actions">
+                <a href="e5-veille1.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+                <a href="e5-veille1.pdf" download class="btn-primary">Télécharger</a>
+              </div>
+            </div>
+
+            <div class="card pdf-card">
+              <div class="pdf-icon" aria-hidden="true">📡</div>
+              <strong>Veille 2</strong>
+              <small>Thème de la veille technologique</small>
+              <div class="pdf-actions">
+                <a href="e5-veille2.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+                <a href="e5-veille2.pdf" download class="btn-primary">Télécharger</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== E6 ===== -->
+    <section id="e6" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="section-num">05.</span> Épreuve E6</h2>
+        <p class="section-desc">Deux situations professionnelles détaillées, avec fiche de situation et fiche de production.</p>
+
+        <!-- Situation 1 -->
+        <div class="subsection">
+          <h3 class="subsection-title e6-tag">Situation 1</h3>
+          <div class="card-grid card-grid-2">
+
+            <div class="card pdf-card">
+              <div class="pdf-icon" aria-hidden="true">📁</div>
+              <strong>Fiche de situation – S1</strong>
+              <small>Description du contexte professionnel</small>
+              <div class="pdf-actions">
+                <!-- 🔧 Remplacer "e6-s1-fiche-situation.pdf" -->
+                <a href="e6-s1-fiche-situation.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+                <a href="e6-s1-fiche-situation.pdf" download class="btn-primary">Télécharger</a>
+              </div>
+            </div>
+
+            <div class="card pdf-card">
+              <div class="pdf-icon" aria-hidden="true">📝</div>
+              <strong>Fiche de production – S1</strong>
+              <small>Travaux réalisés et livrables</small>
+              <div class="pdf-actions">
+                <!-- 🔧 Remplacer "e6-s1-fiche-production.pdf" -->
+                <a href="e6-s1-fiche-production.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+                <a href="e6-s1-fiche-production.pdf" download class="btn-primary">Télécharger</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Situation 2 -->
+        <div class="subsection">
+          <h3 class="subsection-title e6-tag">Situation 2</h3>
+          <div class="card-grid card-grid-2">
+
+            <div class="card pdf-card">
+              <div class="pdf-icon" aria-hidden="true">📁</div>
+              <strong>Fiche de situation – S2</strong>
+              <small>Description du contexte professionnel</small>
+              <div class="pdf-actions">
+                <!-- 🔧 Remplacer "e6-s2-fiche-situation.pdf" -->
+                <a href="e6-s2-fiche-situation.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+                <a href="e6-s2-fiche-situation.pdf" download class="btn-primary">Télécharger</a>
+              </div>
+            </div>
+
+            <div class="card pdf-card">
+              <div class="pdf-icon" aria-hidden="true">📝</div>
+              <strong>Fiche de production – S2</strong>
+              <small>Travaux réalisés et livrables</small>
+              <div class="pdf-actions">
+                <!-- 🔧 Remplacer "e6-s2-fiche-production.pdf" -->
+                <a href="e6-s2-fiche-production.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
+                <a href="e6-s2-fiche-production.pdf" download class="btn-primary">Télécharger</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span class="section-num">06.</span> Contact</h2>
+        <p class="section-desc">Vous souhaitez me contacter ? Je suis disponible via les moyens ci-dessous.</p>
+
+        <div class="contact-grid">
+
+          <!-- Coordonnées -->
+          <div class="contact-info card">
+            <h3>Coordonnées</h3>
+            <ul class="contact-list">
+              <!-- 🔧 Remplacer par vos informations réelles -->
+              <li>
+                <span class="contact-label">Email</span>
+                <!-- RGPD : email encodé pour limiter le scraping -->
+                <a href="#" class="contact-link" data-email="votre.email" data-domain="example.com">votre.email [at] example.com</a>
+              </li>
+              <li>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/votre-profil</a>
+              </li>
+              <li>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/votre-compte" target="_blank" rel="noopener" class="contact-link">github.com/votre-compte</a>
+              </li>
+              <li>
+                <span class="contact-label">Localisation</span>
+                <span>Île-de-France, France</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Formulaire de contact – RGPD : aucune donnée collectée côté serveur via GitHub Pages -->
+          <div class="contact-form card">
+            <h3>Formulaire de contact</h3>
+            <p class="rgpd-notice">ℹ️ Ce formulaire n'envoie pas de données via ce site (GitHub Pages est statique). Il ouvre votre client mail avec les informations pré-remplies.</p>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-nom">Nom *</label>
+                <input type="text" id="contact-nom" name="nom" required autocomplete="name" placeholder="Votre nom" />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email *</label>
+                <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="votre@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="contact-sujet">Sujet *</label>
+                <input type="text" id="contact-sujet" name="sujet" required placeholder="Objet du message" />
+              </div>
+              <div class="form-group">
+                <label for="contact-msg">Message *</label>
+                <textarea id="contact-msg" name="message" rows="5" required placeholder="Votre message..."></textarea>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" id="rgpd-consent" name="rgpd" required />
+                <label for="rgpd-consent">J'accepte que ces informations soient utilisées uniquement pour répondre à ma demande.</label>
+              </div>
+              <button type="submit" class="btn-primary btn-full">Envoyer via votre messagerie</button>
+              <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Zoha · Portfolio BTS SIO SISR</p>
+      <p class="footer-rgpd">Site statique · Aucun cookie · Aucune donnée collectée · <a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
