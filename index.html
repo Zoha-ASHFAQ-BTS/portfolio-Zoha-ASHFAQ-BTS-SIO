@@ -26,16 +26,9 @@
         <span class="logo-bracket">[</span>Zoha<span class="logo-bracket">]</span>
         <small>BTS SIO · SISR</small>
       </div>
-      <div style="display:flex;align-items:center;gap:.6rem;flex-shrink:0;">
-        <!-- Toggle Dark / Light mode -->
-        <button class="theme-toggle" id="theme-toggle" aria-label="Basculer thème clair/sombre" title="Changer de thème">
-          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀️</span>
-          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
-        </button>
-        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="#accueil" class="nav-link">Accueil</a></li>
         <li><a href="#cv" class="nav-link">CV</a></li>
@@ -401,36 +394,6 @@
     </div>
   </footer>
 
-  <!-- Initialisation thème AVANT rendu (évite le flash) -->
-  <script>
-    (function() {
-      const saved = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = saved || (prefersDark ? 'dark' : 'light');
-      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
-    })();
-  </script>
   <script src="script.js"></script>
-  <script>
-    // ── Toggle thème clair / sombre ──────────────────────────────
-    (function() {
-      const btn = document.getElementById('theme-toggle');
-      if (!btn) return;
-
-      function applyTheme(theme) {
-        if (theme === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-        } else {
-          document.documentElement.removeAttribute('data-theme');
-        }
-        localStorage.setItem('theme', theme);
-      }
-
-      btn.addEventListener('click', function() {
-        const current = document.documentElement.getAttribute('data-theme');
-        applyTheme(current === 'light' ? 'dark' : 'light');
-      });
-    })();
-  </script>
 </body>
 </html>
