@@ -6,14 +6,15 @@
 /* ─── 0. RESET & BASE ─────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── THÈME SOMBRE (défaut) ──────────────────────────────────────── */
 :root {
   /* Palette principale */
-  --bg:          #0a0d14;       /* fond très sombre */
-  --bg-alt:      #0f1320;       /* sections alternées */
-  --bg-card:     #131929;       /* cartes */
-  --bg-card-h:   #192034;       /* cartes hover */
-  --border:      #1e2a42;       /* bordures subtiles */
-  --border-h:    #2e4070;       /* bordures hover */
+  --bg:          #0a0d14;
+  --bg-alt:      #0f1320;
+  --bg-card:     #131929;
+  --bg-card-h:   #192034;
+  --border:      #1e2a42;
+  --border-h:    #2e4070;
 
   /* Textes */
   --text:        #e2e8f4;
@@ -21,10 +22,10 @@
   --text-faint:  #3d506e;
 
   /* Accents */
-  --accent:      #3b82f6;       /* bleu tech */
-  --accent-h:    #60a5fa;       /* bleu clair hover */
-  --accent-2:    #06d6a0;       /* vert menthe (second accent) */
-  --accent-3:    #f59e0b;       /* ambre (badges) */
+  --accent:      #3b82f6;
+  --accent-h:    #60a5fa;
+  --accent-2:    #06d6a0;
+  --accent-3:    #f59e0b;
 
   /* Gradients */
   --grad-hero:   linear-gradient(135deg, #0a0d14 0%, #0f1a2e 60%, #0d1425 100%);
@@ -52,6 +53,94 @@
   --t-fast:  150ms ease;
   --t-med:   280ms ease;
   --t-slow:  500ms ease;
+}
+
+/* ── THÈME CLAIR ────────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg:          #f4f6fb;
+  --bg-alt:      #eaecf4;
+  --bg-card:     #ffffff;
+  --bg-card-h:   #f0f4ff;
+  --border:      #d0d8ec;
+  --border-h:    #93aee0;
+
+  --text:        #111827;
+  --text-muted:  #4b5a7a;
+  --text-faint:  #9aa5c0;
+
+  --accent:      #2563eb;
+  --accent-h:    #1d4ed8;
+  --accent-2:    #059669;
+  --accent-3:    #d97706;
+
+  --grad-hero:   linear-gradient(135deg, #e8edf8 0%, #dce6f8 60%, #e4ebf8 100%);
+  --grad-accent: linear-gradient(135deg, #2563eb 0%, #6366f1 100%);
+  --grad-card:   linear-gradient(145deg, #ffffff, #f0f4ff);
+
+  --shadow:      0 4px 24px rgba(0,0,0,.08);
+  --shadow-lg:   0 8px 48px rgba(0,0,0,.12);
+  --glow:        0 0 24px rgba(37,99,235,.2);
+}
+
+/* ── TOGGLE DARK/LIGHT ──────────────────────────────────────────── */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 99px;
+  padding: 3px;
+  gap: 2px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color var(--t-med), background var(--t-med);
+}
+.theme-toggle:hover { border-color: var(--accent); }
+
+.theme-toggle__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; height: 28px;
+  border-radius: 99px;
+  font-size: .9rem;
+  transition: background var(--t-med), opacity var(--t-med);
+  opacity: .45;
+}
+.theme-toggle__icon.active {
+  background: var(--accent);
+  opacity: 1;
+}
+/* En dark mode : lune active | En light mode : soleil actif */
+html:not([data-theme="light"]) .theme-toggle__icon--moon { background: rgba(59,130,246,.15); opacity: 1; }
+[data-theme="light"]           .theme-toggle__icon--sun  { background: var(--accent); opacity: 1; }
+
+/* Smooth transition globale au changement de thème */
+body { transition: background-color var(--t-slow), color var(--t-slow); }
+.site-header, .terminal-bar, .bg-card, nav, footer { transition: background var(--t-slow), border-color var(--t-slow); }
+
+/* En light mode : ajustements spécifiques */
+[data-theme="light"] .site-header {
+  background: rgba(244,246,251,.88) !important;
+}
+[data-theme="light"] .site-header.scrolled {
+  background: rgba(244,246,251,.97) !important;
+}
+[data-theme="light"] .main-nav {
+  background: rgba(244,246,251,.97) !important;
+}
+[data-theme="light"] .terminal-bar { background: #e0e5f0; }
+[data-theme="light"] .site-footer  { background: #dde2ef; }
+[data-theme="light"] .hero-section::before {
+  background-image:
+    linear-gradient(rgba(37,99,235,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37,99,235,.04) 1px, transparent 1px);
+}
+[data-theme="light"] .rgpd-banner {
+  background: var(--bg-card);
+}
+[data-theme="light"] .back-to-top {
+  background: var(--bg-card);
 }
 
 html {
