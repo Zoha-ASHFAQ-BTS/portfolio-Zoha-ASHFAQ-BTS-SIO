@@ -5,30 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio BTS SIO SISR – Zoha" />
   <meta name="robots" content="noindex, nofollow" />
-  <!-- RGPD : pas de cookies tiers, pas de trackers -->
   <title>Portfolio BTS SIO SISR – Zoha</title>
+
+  <!-- Initialisation thème AVANT rendu — évite le flash -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved ? saved : (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- ===== BANNIÈRE RGPD ===== -->
   <div id="rgpd-banner" role="dialog" aria-label="Politique de confidentialité">
-    <p>Ce site ne collecte aucune donnée personnelle. Le formulaire de contact est à titre indicatif. <button id="rgpd-ok">J'ai compris</button></p>
+    <p>Ce site ne collecte aucune donnée personnelle. Le formulaire de contact est à titre indicatif.</p>
+    <button id="rgpd-ok">J'ai compris</button>
   </div>
 
   <!-- ===== NAVIGATION ===== -->
-  <header>
+  <header id="site-header">
     <nav class="navbar" aria-label="Navigation principale">
       <div class="nav-logo">
-        <span class="logo-bracket">[</span>Zoha<span class="logo-bracket">]</span>
+        <span><span class="logo-bracket">[</span>Zoha<span class="logo-bracket">]</span></span>
         <small>BTS SIO · SISR</small>
       </div>
-      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
-        <span></span><span></span><span></span>
-      </button>
+
       <ul class="nav-links" id="nav-links">
         <li><a href="#accueil" class="nav-link">Accueil</a></li>
         <li><a href="#cv" class="nav-link">CV</a></li>
@@ -38,6 +47,17 @@
         <li><a href="#e6" class="nav-link">E6</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
+
+      <div style="display:flex;align-items:center;gap:.6rem;flex-shrink:0;">
+        <!-- Toggle Dark / Light -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Basculer thème clair/sombre" title="Changer de thème">
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀️</span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -72,7 +92,6 @@
         <h2 class="section-title"><span class="section-num">01.</span> Curriculum Vitæ</h2>
         <p class="section-desc">Mon parcours, mes compétences et mes expériences au format PDF.</p>
         <div class="card card-single">
-          <!-- 🔧 Remplacer "cv.pdf" par le nom de votre fichier PDF dans le même dossier -->
           <div class="pdf-entry">
             <div class="pdf-icon" aria-hidden="true">📄</div>
             <div class="pdf-info">
@@ -101,7 +120,6 @@
               <small>Plaquette / document de présentation</small>
             </div>
             <div class="pdf-actions">
-              <!-- 🔧 Remplacer "entreprise.pdf" par votre fichier -->
               <a href="entreprise.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
               <a href="entreprise.pdf" download class="btn-primary">Télécharger</a>
             </div>
@@ -117,7 +135,6 @@
         <p class="section-desc">Mes certifications professionnelles et académiques obtenues.</p>
         <div class="card-grid">
 
-          <!-- 🔧 Dupliquer ce bloc pour ajouter une certification -->
           <div class="card pdf-card">
             <div class="pdf-icon" aria-hidden="true">🎓</div>
             <strong>Certification 1</strong>
@@ -169,7 +186,6 @@
                 <small>Document officiel de synthèse des activités</small>
               </div>
               <div class="pdf-actions">
-                <!-- 🔧 Remplacer "e5-tableau-synthese.pdf" -->
                 <a href="e5-tableau-synthese.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
                 <a href="e5-tableau-synthese.pdf" download class="btn-primary">Télécharger</a>
               </div>
@@ -182,7 +198,6 @@
           <h3 class="subsection-title">🛠️ Missions E5</h3>
           <div class="card-grid">
 
-            <!-- 🔧 Dupliquer ce bloc pour ajouter une mission -->
             <div class="card pdf-card">
               <div class="pdf-icon" aria-hidden="true">🛠️</div>
               <strong>Mission 1</strong>
@@ -221,7 +236,6 @@
           <h3 class="subsection-title">📡 Veille technologique</h3>
           <div class="card-grid">
 
-            <!-- 🔧 Dupliquer ce bloc pour ajouter une veille -->
             <div class="card pdf-card">
               <div class="pdf-icon" aria-hidden="true">📡</div>
               <strong>Veille 1</strong>
@@ -264,7 +278,6 @@
               <strong>Fiche de situation – S1</strong>
               <small>Description du contexte professionnel</small>
               <div class="pdf-actions">
-                <!-- 🔧 Remplacer "e6-s1-fiche-situation.pdf" -->
                 <a href="e6-s1-fiche-situation.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
                 <a href="e6-s1-fiche-situation.pdf" download class="btn-primary">Télécharger</a>
               </div>
@@ -275,7 +288,6 @@
               <strong>Fiche de production – S1</strong>
               <small>Travaux réalisés et livrables</small>
               <div class="pdf-actions">
-                <!-- 🔧 Remplacer "e6-s1-fiche-production.pdf" -->
                 <a href="e6-s1-fiche-production.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
                 <a href="e6-s1-fiche-production.pdf" download class="btn-primary">Télécharger</a>
               </div>
@@ -294,7 +306,6 @@
               <strong>Fiche de situation – S2</strong>
               <small>Description du contexte professionnel</small>
               <div class="pdf-actions">
-                <!-- 🔧 Remplacer "e6-s2-fiche-situation.pdf" -->
                 <a href="e6-s2-fiche-situation.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
                 <a href="e6-s2-fiche-situation.pdf" download class="btn-primary">Télécharger</a>
               </div>
@@ -305,7 +316,6 @@
               <strong>Fiche de production – S2</strong>
               <small>Travaux réalisés et livrables</small>
               <div class="pdf-actions">
-                <!-- 🔧 Remplacer "e6-s2-fiche-production.pdf" -->
                 <a href="e6-s2-fiche-production.pdf" target="_blank" rel="noopener" class="btn-outline">Ouvrir</a>
                 <a href="e6-s2-fiche-production.pdf" download class="btn-primary">Télécharger</a>
               </div>
@@ -325,14 +335,11 @@
 
         <div class="contact-grid">
 
-          <!-- Coordonnées -->
           <div class="contact-info card">
             <h3>Coordonnées</h3>
             <ul class="contact-list">
-              <!-- 🔧 Remplacer par vos informations réelles -->
               <li>
                 <span class="contact-label">Email</span>
-                <!-- RGPD : email encodé pour limiter le scraping -->
                 <a href="#" class="contact-link" data-email="votre.email" data-domain="example.com">votre.email [at] example.com</a>
               </li>
               <li>
@@ -350,7 +357,6 @@
             </ul>
           </div>
 
-          <!-- Formulaire de contact – RGPD : aucune donnée collectée côté serveur via GitHub Pages -->
           <div class="contact-form card">
             <h3>Formulaire de contact</h3>
             <p class="rgpd-notice">ℹ️ Ce formulaire n'envoie pas de données via ce site (GitHub Pages est statique). Il ouvre votre client mail avec les informations pré-remplies.</p>
@@ -394,6 +400,102 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // ── Année footer ─────────────────────────────────────────────
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Bandeau RGPD ─────────────────────────────────────────────
+    var banner = document.getElementById('rgpd-banner');
+    var rgpdBtn = document.getElementById('rgpd-ok');
+    if (localStorage.getItem('rgpd') === 'ok') banner.classList.add('hidden');
+    if (rgpdBtn) rgpdBtn.addEventListener('click', function () {
+      banner.classList.add('hidden');
+      localStorage.setItem('rgpd', 'ok');
+    });
+
+    // ── Toggle dark / light ───────────────────────────────────────
+    var themeBtn = document.getElementById('theme-toggle');
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      localStorage.setItem('theme', theme);
+    }
+    if (themeBtn) {
+      themeBtn.addEventListener('click', function () {
+        var current = document.documentElement.getAttribute('data-theme');
+        applyTheme(current === 'light' ? 'dark' : 'light');
+      });
+    }
+
+    // ── Burger mobile ─────────────────────────────────────────────
+    var navToggle = document.getElementById('nav-toggle');
+    var navLinks  = document.getElementById('nav-links');
+    if (navToggle) {
+      navToggle.addEventListener('click', function () {
+        var open = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open', open);
+        navToggle.setAttribute('aria-expanded', open);
+      });
+    }
+    // Fermer le menu au clic sur un lien
+    document.querySelectorAll('.nav-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ── Scroll header ─────────────────────────────────────────────
+    var siteHeader = document.getElementById('site-header');
+    window.addEventListener('scroll', function () {
+      siteHeader.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ── Nav active ────────────────────────────────────────────────
+    var sections = document.querySelectorAll('section[id]');
+    var navItems = document.querySelectorAll('.nav-link');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          navItems.forEach(function (a) {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(function (s) { observer.observe(s); });
+
+    // ── Formulaire → mailto ───────────────────────────────────────
+    var form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var nom     = document.getElementById('contact-nom').value.trim();
+        var email   = document.getElementById('contact-email').value.trim();
+        var sujet   = document.getElementById('contact-sujet').value.trim();
+        var message = document.getElementById('contact-msg').value.trim();
+        var consent = document.getElementById('rgpd-consent').checked;
+        var fb = document.getElementById('form-feedback');
+        if (!nom || !email || !sujet || !message || !consent) {
+          fb.textContent = '⚠️ Veuillez remplir tous les champs obligatoires.';
+          fb.style.color = '#ef4444';
+          return;
+        }
+        var emailLink = document.querySelector('[data-email]');
+        var dest = emailLink ? emailLink.dataset.email + '@' + emailLink.dataset.domain : '';
+        var body = 'Nom : ' + nom + '\nEmail : ' + email + '\n\n' + message;
+        window.location.href = 'mailto:' + dest
+          + '?subject=' + encodeURIComponent(sujet)
+          + '&body=' + encodeURIComponent(body);
+        fb.textContent = '✅ Votre client mail va s\'ouvrir.';
+        fb.style.color = '';
+      });
+    }
+  </script>
+
 </body>
 </html>
